@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  background: radial-gradient(circle at center, #000015, #000010, #000005);
+  overflow-x: hidden;
+  text-align: center;
+}
+
+#stars, #stars2, #stars3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: moveStars 100s linear infinite;
+  z-index: -1;
+}
+#stars2 { animation-duration: 200s; opacity: 0.5; }
+#stars3 { animation-duration: 300s; opacity: 0.2; }
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 10000px; }
+}
+
+header {
+  padding: 40px 10px;
+  background: rgba(255,255,255,0.05);
+  border-bottom: 1px solid #0ff;
+}
+
+h1 {
+  color: #00ffff;
+  font-size: 2.2em;
+  text-shadow: 0 0 15px #00ffff;
+}
+
+.reactor-section {
+  margin: 60px 0;
+}
+
+.reactor-core {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(circle, #0ff, #004);
+  box-shadow: 0 0 50px #0ff;
+  animation: pulse 2s infinite alternate;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.reactor-core:active {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  from { box-shadow: 0 0 20px #0ff; }
+  to { box-shadow: 0 0 60px #00f0ff; }
+}
+
+.anime-section, .scientists {
+  margin: 50px 15px;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+}
+
+.anime-card {
+  margin: 15px;
+  padding: 15px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid #0ff;
+  border-radius: 10px;
+  transition: transform 0.4s;
+}
+.anime-card:hover {
+  transform: scale(1.05);
+  background: rgba(0, 255, 255, 0.2);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding: 8px 0;
+}
+
+footer {
+  padding: 15px;
+  background: rgba(255,255,255,0.05);
+  font-size: 14px;
+}
